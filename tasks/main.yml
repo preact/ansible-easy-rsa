@@ -1,0 +1,16 @@
+---
+- name: install easy-rsa package
+  apt:
+    pkg: easy-rsa
+
+- name: create needed easy-rsa directories
+  shell: 'make-cadir {{ item.path }}'
+  args:
+    creates: '{{ item.path }}'
+  with_items: '{{ easy_rsa_cadirs }}'
+
+- name: set up vars files
+  template:
+    src: vars.j2
+    dest: '{{ item.path }}/vars'
+  with_items: '{{ easy_rsa_cadirs }}'

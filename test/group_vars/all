@@ -1,0 +1,9 @@
+---
+easy_rsa_cadirs:
+  - path: /etc/easy-rsa-test
+    key_country: US
+    key_province: CA
+    key_city: SanFrancisco
+    key_org: ExampleCompany
+    key_email: team-devops@example.com
+    key_ou: DevOps

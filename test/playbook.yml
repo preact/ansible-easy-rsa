@@ -1,0 +1,6 @@
+---
+- name: Configure a VPN Server
+  hosts: all
+  sudo: yes
+  roles:
+    - role: ../../ansible-easy-rsa
